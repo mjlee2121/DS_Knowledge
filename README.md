@@ -24,9 +24,32 @@ Entropy is lowest at the extremes, when the bubble either contains no positive i
 
 **entropy is a measure of disorder or uncertainty and the goal of ML models and DS in general is to reduce uncertainty**
 
-Now you know how to measure disorder. Next we need a metric to measure the <ins>reduction of this disorder in our target variable/class given additional informaton about it.</ins>
+Now you know how to measure disorder. Next we need a metric to measure the <ins>reduction of this disorder in our target variable/class given additional informaton about it.</ins>  
 
-[!alt text](https://user-images.githubusercontent.com/48074724/134525302-acdf201b-cc59-4ca1-b1a9-b5fb9044c615.png)
+[!alt text](https://user-images.githubusercontent.com/48074724/134525302-acdf201b-cc59-4ca1-b1a9-b5fb9044c615.png)  
+
+We simply subtract the entropy of Y given X from the entropy of just Y to calculate the reduction of uncertainty about Y given an additional piece of information X about Y. **This is called Information Gain**. The greater the reduction in this unertainty, the more information is gained about Y from X.  
+
+Let's bring a Credit Rating and Liability example and bring all of it together how DT uses entropy and information gain to decide what feature to split their nodes on as they are being traied on a dataset.  
+
+<pre>Contingency Table</pre>
+![alt text](https://user-images.githubusercontent.com/48074724/134529123-5b5c6e74-5a9d-4135-a2d0-f81f125bfa4d.png)  
+
+Our target variable is Liability which can take 'Normal' and 'High' and we only have one feature called Credit Rating which can take on 'Excellent','Good', and 'Poor'.  
+Let's use the contingency table to calculate the entropy of our target variable by itself and then calclate entropy of our target variable given additional information about the feature, CR. This will allow me to calculate how much additional information does 'CR' provide for my target variable 'Liability'.  
+
+![alt text](https://user-images.githubusercontent.com/48074724/134529836-1f5e3e5e-bf9f-4d18-8b7b-cb7e22311694.png)  
+The entropy is 1, at maximum disorder due to the even split between class label 'Normal' and 'High'.  
+Our next step is to calculate the entropy of our target variable Liability given additional information about CR. For this we'll calculate the entropy for Liability for each value of CR and add them using a weighted average of the proportion of observations that end up in each value. 
+
+
+![alt text](https://user-images.githubusercontent.com/48074724/134529955-d868ac1e-9bb3-4b43-837f-6e4647e0cf6a.png)  
+Now we can compute the Information Gain on Liability from CR to see how informative this feature is.  
+
+![alt text](https://user-images.githubusercontent.com/48074724/134530440-674a3f77-5a98-49f5-9ded-56f86c120d8d.png)  
+Knowing the CR helped us reduce the uncertainty around our target variable, Liability. That's what a good feature is supposed to do; provide us information about our target variable.  
+This is exactly how and why DT uses entropy and information gain to determine which feature to split their nodes on to get closer to predicting the target variable with each split and also to determine when to stop splitting the tree.  
+
 
 
 <pre>Reference</pre>
