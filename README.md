@@ -24,10 +24,9 @@ Entropy is lowest at the extremes, when the bubble either contains no positive i
 
 **entropy is a measure of disorder or uncertainty and the goal of ML models and DS in general is to reduce uncertainty**
 
-Now you know how to measure disorder. Next we need a metric to measure the <ins>reduction of this disorder in our target variable/class given additional informaton about it.</ins>  
+Now you know how to measure disorder. Next we need a metric to measure the <ins>reduction of this disorder in our target variable/class given additional informaton about it</ins>.  
 
 [!alt text](https://user-images.githubusercontent.com/48074724/134530972-4fa8e29f-51a7-483b-9c21-2aaa7b3aac2c.png)
-
 We simply subtract the entropy of Y given X from the entropy of just Y to calculate the reduction of uncertainty about Y given an additional piece of information X about Y. **This is called Information Gain**. The greater the reduction in this unertainty, the more information is gained about Y from X.  
 
 Let's bring a Credit Rating and Liability example and bring all of it together how DT uses entropy and information gain to decide what feature to split their nodes on as they are being traied on a dataset.  
