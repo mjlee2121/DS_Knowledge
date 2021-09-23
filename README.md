@@ -26,7 +26,7 @@ Entropy is lowest at the extremes, when the bubble either contains no positive i
 
 Now you know how to measure disorder. Next we need a metric to measure the <ins>reduction of this disorder in our target variable/class given additional informaton about it.</ins>  
 
-[!alt text](https://user-images.githubusercontent.com/48074724/134525302-acdf201b-cc59-4ca1-b1a9-b5fb9044c615.png)  
+[!alt text](https://user-images.githubusercontent.com/48074724/134530972-4fa8e29f-51a7-483b-9c21-2aaa7b3aac2c.png)
 
 We simply subtract the entropy of Y given X from the entropy of just Y to calculate the reduction of uncertainty about Y given an additional piece of information X about Y. **This is called Information Gain**. The greater the reduction in this unertainty, the more information is gained about Y from X.  
 
