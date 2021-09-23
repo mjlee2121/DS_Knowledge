@@ -15,7 +15,7 @@ Simply put, entropy is measure of disorder.
 
 In the formula, Pi is the frequentist probability of an element/class 'i' in our data. Let's say we have two classes, + and -. Then i will be either + or -.  
 Now, if we have 30 + and 70 -, P+ will be 3/10 and P- will be 7/10. Plug that in the formula above, then you'll get this  
-1[alt text]()
+![alt text]()
 
-
+![alt text](https://user-images.githubusercontent.com/48074724/134523895-230e311e-1b39-44ec-beee-170239b68bd6.png)
 Reference : https://towardsdatascience.com/entropy-how-decision-trees-make-decisions-2946b9c18c8
